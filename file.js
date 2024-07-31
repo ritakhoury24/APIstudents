@@ -8,7 +8,7 @@ let ws1 = wb.Sheets["Sheet1"]
 let data = xlsx.utils.sheet_to_json(ws1)
 
 
-app.get('/students', function (req, res) {
+app.get('/', function (req, res) {
     res.send(data)
   })
 
