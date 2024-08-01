@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3030;
 const xlsx=require('xlsx')
+const cors =require('cors')
+ 
+app.use(cors())
 
 let wb= xlsx.readFile("students.xlsx");
 let ws1 = wb.Sheets["Sheet1"]
